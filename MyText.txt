@@ -1,0 +1,7 @@
+^^Welcome#
+You have to install PIL library before excuting the code.#
+Here you can use (^^) to align the word to the centre.#
+#
+You can use (Hash) to shift to new line##
+->Margin at left#
+You can use (->) to use margin to the left.#

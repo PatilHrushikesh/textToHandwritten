@@ -26,25 +26,25 @@ def getpage():
 		bg = Image.open("myfont\\backpage.png", 'r')
 		back = Image.new('RGBA', (5952,8088), (0, 0, 0, 0))
 		back.paste(bg, (0,0))
-		addroll()
+		# addroll() # This function is to add rollnumber at the top margin of page
 		print("OUT")
 	except:
 		print("backpage not found")
 		exit() 
 
 def savepage():
-	path="final\\zdone"
+	path="final\\done"
 
 	i=1
 	while os.path.exists(path+str(i)+".png"):
 		i+=1;
 	back.save(path+str(i)+".png","PNG")
-	print("Saved zdone"+str(i)+".png .......n")
+	print("Saved done"+str(i)+".png .......n")
 
 
 def pasteimg(case,start,height):
 	global back
-    # print(width,height)
+	# print(width,height)
 	try:
 		cases = Image.open(imgsource+"%s.png"%case)
 		back.paste(cases,(start,height),mask=cases)
@@ -204,15 +204,15 @@ def checktag(content,i,height,start,cur,end):
 			exit()
 	return 0
 
-def addroll():
-	global arr,back
-	print("Addding rollno")
-	wid,hei=4000+(random.randint(-400,200)),300+(random.randint(-100,200))
-	# wid, hei =4200, 500
-	getno=random.randint(1,3)
-	roll = "roll"+str(getno)
-	pasteimg(roll, wid, hei)
-	print("REtuning")
+# def addroll():
+# 	global arr,back
+# 	print("Addding rollno")
+# 	wid,hei=4000+(random.randint(-400,200)),300+(random.randint(-100,200))
+# 	# wid, hei =4200, 500
+# 	getno=random.randint(1,3)
+# 	roll = "roll"+str(getno)
+# 	pasteimg(roll, wid, hei)
+# 	print("REtuning")
 
 	
 def condition(height,start,cur,end,content):
@@ -280,7 +280,7 @@ def readfile():
 
 def extract():
 	try:
-		filepath="MyText.html"
+		filepath="MyText.txt"
 		file = open(filepath, encoding="utf8")
 		content=file.read()
 		file.close()
