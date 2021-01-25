@@ -13,7 +13,8 @@ If you have Pythons installed and want to install this for Python3:
 ```bash
 python3 -m pip install Pillow
 ```
-
+---
+> Change the path format to backslash in maincode.py if you are using Linux (Curre)
 ## Procedure to use 
 1. Put the content you want to be handwritten in MyText file.
 
