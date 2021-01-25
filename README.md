@@ -25,9 +25,9 @@ python3 -m pip install Pillow
 
 4. Output will be generated in `final` directory with name done1.png or done2.png...etc.
 
-### I have added few alphabets only you can add your alphabets using following method.
+### I have added few alphabets only. You can add your alphabets using following method.
 
-#### If you want to add more alphabets follow following procedure for each alphabet.
+* ####  If you want to add more alphabets follow following procedure for each alphabet.
 
    a. Write alphabet on plain white paper(with black pen). 
    
