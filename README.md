@@ -14,7 +14,7 @@ If you have Pythons installed and want to install this for Python3:
 python3 -m pip install Pillow
 ```
 ---
-> Change the path format to backslash in maincode.py if you are using Linux (Curre)
+> Change the path format to backslash in maincode.py if you are using Linux (Currently works for Windows)
 ## Procedure to use 
 1. Put the content you want to be handwritten in MyText file.
 
