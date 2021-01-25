@@ -1,9 +1,14 @@
 # textToHandwritten
+
 Put the content you want to be handwritten in MyText file.
+
 Follow formating  rule(check MyText file) to format Output.
+
 I have uploaded only few alphabets.
+
 If you want to add more alphabets follow following procedure for each alphabet:
-    1.Write alphabet on plain white paper(with black pen).
+
+    1.Write alphabet on plain white paper(with black pen). 
     2.Capture a photo with high quality camera.
     3.Crop the letter as close as possible from all sides.
     4.Remove white background using any background remover tool.
