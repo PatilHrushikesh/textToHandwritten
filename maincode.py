@@ -1,7 +1,7 @@
 #
 from PIL import Image
 from countwordlen import imgwidth
-#import pytesseract
+# import pytesseract
 import random
 import string
 import os
@@ -16,7 +16,7 @@ pagewidth=5940
 start=715
 end=5930
 pageno=0
-print(arr)
+# print(arr)
 
 # back=none
 def getpage():
@@ -27,7 +27,6 @@ def getpage():
 		back = Image.new('RGBA', (5952,8088), (0, 0, 0, 0))
 		back.paste(bg, (0,0))
 		# addroll() # This function is to add rollnumber at the top margin of page
-		print("OUT")
 	except:
 		print("backpage not found")
 		exit() 
@@ -105,7 +104,10 @@ def getwordpix(word):
 	for char in word:
 		if char in arr:
 			img=getname(char)
-			wordwid+=imgwidth[img]
+			try:
+				wordwid+=imgwidth[img]
+			except:
+				print(f"Case {img} not found....\n")	
 	return wordwid
 
 def getnewline(start,cur,end,height):
@@ -141,22 +143,22 @@ def maketable(content,height,start,cur,end):
 	i=0
 	for C in range(0,columns):
 		i+=1
-		print(content[i])
+		# print(content[i])
 		total+=int(content[i])
 		ratio.append(int(content[i]))
 	prev=i+1
 	base=5237/total
 	content=" ".join(content[i+1:])
-	print(content)
+	# print(content)
 	try:
 		row=content.split("#");
-		print("----")
+		# print("----")
 		for R in row:
 			col=R.split("|")
 			colno=0
 			for C in col:
-				print("!!!!")
-				print(C)
+				# print("!!!!")
+				# print(C)
 				start,cur,end,height=condition(height, base*colno+width, base*colno+width, base*(colno+1)+width-20, content)
 
 	except Exception as e:
@@ -164,7 +166,7 @@ def maketable(content,height,start,cur,end):
 		print(e)
 
 def checktag(content,i,height,start,cur,end):
-	print("NEW ",content[i])
+	# print("NEW ",content[i])
 	if content[i]=="<table>":
 		
 		try:
@@ -216,7 +218,7 @@ def checktag(content,i,height,start,cur,end):
 
 	
 def condition(height,start,cur,end,content):
-	print("IN condition\n\n\n")
+	# print("IN condition\n\n\n")
 	global arr,back
 	first=1
 	count=0
@@ -228,7 +230,7 @@ def condition(height,start,cur,end,content):
 		if ind:
 			i=ind
 			continue
-		print("This word  :",word," <-")
+		# print("This word  :",word," <-")
 		halfword=0
 		leng=len(word)
 		wordwid=0
@@ -236,22 +238,22 @@ def condition(height,start,cur,end,content):
 		wordwid=getwordpix(word)
 
 		widthafterpaste=cur+wordwid+70
-		print(wordwid)
-		print("width+wordwid=",cur+wordwid,"  Page width=",end)
+		# print(wordwid)
+		# print("width+wordwid=",cur+wordwid,"  Page width=",end)
 
 		cur+=60+random.randint(0,35)
 		if widthafterpaste > end:#If current word width is greater 
 											#than available
 			diff=widthafterpaste-end
 			if(leng>5 and diff>((0.4*leng)+250)):
-				print("Half word can be fit")
+				# print("Half word can be fit")
 				halfword=1
 			else:
 
-				print("--------Word does not Fit-------")
-				print(cur,"  ",height)
+				# print("--------Word does not Fit-------")
+				# print(cur,"  ",height)
 				cur,height=getnewline(start,cur,end,height)
-				print(cur,"  ",height)
+				# print(cur,"  ",height)
 
 		if height>3500 and first:
 			height+=10
@@ -266,10 +268,10 @@ def condition(height,start,cur,end,content):
 
 				if halfword and cur + random.randint(200,280) >= end:
 					# pasteimg("sub")
-					print("Half word.....",end)
+					# print("Half word.....",end)
 					cur,height=getnewline(start,cur,end,height)
 					# pasteimg("sub")
-				print(cur,height)   
+				# print(cur,height)   
 				cur=pasteimg(letter,cur,height)
 	# sleep(100)
 	return start,cur,end,height
