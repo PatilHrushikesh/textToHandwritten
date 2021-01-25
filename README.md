@@ -15,11 +15,11 @@ python3 -m pip install Pillow
 
 2. Follow formating  rule as given below to format Output.(check MyText file as well)
 
-    a. Use **#** to switch to the new line
+    a. Use `#` to switch to the new line
     
-    b. Use **^^** to align the text to centre(Applies to the whole line)
+    b. Use `^^` to align the text to centre(Applies to the whole line)
     
-    c. Use **->** for Tab(You can't use multiple spaces as this is whitespace collapsing)
+    c. Use `->` for Tab(You can't use multiple spaces as this is whitespace collapsing)
 
 3. Run the `maincode.py`
 
