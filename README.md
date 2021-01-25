@@ -27,22 +27,23 @@ python3 -m pip install Pillow
 
 ### I have added few alphabets only you can add your alphabets using following method.
 
-If you want to add more alphabets follow following procedure for each alphabet:
+#### If you want to add more alphabets follow following procedure for each alphabet.
 
-        1.Write alphabet on plain white paper(with black pen). 
+   a. Write alphabet on plain white paper(with black pen). 
+   
+   b. Capture a photo with high quality camera.
 
-        2.Capture a photo with high quality camera.
+   c. Crop the letter as close as possible from all sides.
 
-        3.Crop the letter as close as possible from all sides.
+   d. Remove white background using any background remover tool. [link](https://onlinepngtools.com/create-transparent-png)
 
-        4.Remove white background using any background remover tool. [link](https://onlinepngtools.com/create-transparent-png)
+   e. Resize the image and set its height to 160px maintaining the ratio. [link](https://play.google.com/store/apps/details?id=com.vinson.shrinker&hl=en_IN&gl=US)
 
-        5.Resize the image and set its height to 160px maintaining the ratio. [link](https://play.google.com/store/apps/details?id=com.vinson.shrinker&hl=en_IN&gl=US)
+   f. Suppose if the alphabet is capital 'A' save image as ca.png 
 
-        6.Suppose if the alphabet is capital 'A' save image as ca.png 
+   g. else save it as a.png
 
-        7.else save it as a.png
+   h. If it is any special symbol follow convention from the `maincode.py` function `getname()`
 
-        8.If it is any special symbol follow convention from the `maincode.py` function `getname()`
         
-        > Refer the `myfont` directory for more help
+## > Refer the `myfont` directory for more help
