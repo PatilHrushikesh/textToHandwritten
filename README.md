@@ -46,4 +46,8 @@ python3 -m pip install Pillow
    h. If it is any special symbol follow convention from the `maincode.py` function `getname()`
 
         
-## > Refer the `myfont` directory for more help
+### > Refer the `myfont` directory for more help
+
+## Updates
+
+1. Need help to add tables in Output
